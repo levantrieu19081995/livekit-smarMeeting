@@ -1,0 +1,258 @@
+PHASE 4B.1 - SRD HUMAN REVIEW BUNDLE
+
+MEETING: Cu?c h?p 4b.1 ng?y 25/9/2026
+MEETING ID: 27
+CAPTURE SESSION ID: 22
+SESSION: fbb8b125-b87e-414b-ba28-a03d6c3f2d05
+PARTICIPANT: levantrieu (account:6851f76b-2ce4-4d43-9c50-d0e265d9df77)
+TRACK SID: TR_AMmcstTmGaZF4R
+RAW SOURCE: data/meetings/meeting-27/session-fbb8b125-b87e-414b-ba28-a03d6c3f2d05/participants/account-6851f76b-2ce4-4d43-9c50-d0e265d9df77/segment-001_TR_AMmcstTmGaZF4R.wav
+RAW SHA-256: 85ac1884392ed7b51bcce08378f672c6bdb31f7cd2c4f1ccf990a5906d3fed7b
+RAW durationMs: 52880
+RAW file size: 5076524
+RAW channels: 1
+RAW sample width bytes: 2
+RAW sample rate: 48000
+RAW frame count: 2538240
+
+SRD OPTIONS:
+vad_mode=1
+frame_ms=20
+pre_padding_ms=350
+post_padding_ms=500
+merge_gap_ms=700
+min_speech_ms=60
+
+SUMMARY:
+detected region count: 13
+total detected region durationMs: 29580
+speech retention ratio: 55.94%
+excluded audio durationMs: 23300
+substantial excluded gap count: 11
+excluded gap review minimum: 100 ms
+
+EXPECTED SCRIPT ORDER:
+1. C?
+2. Kh?ng
+3. ??ng ?
+4. Kh?ng ??ng ?
+5. Nh?t tr?
+6. T?i ??ng ? v?i ph??ng ?n n?y
+7. Theo t?i, ch?ng ta n?n ki?m tra l?i n?i dung tr??c khi th?ng qua.
+
+REGIONS:
+
+REGION 001
+startMs: 0 (00:00:00.000)
+endMs: 1640 (00:00:01.640)
+durationMs: 1640
+file: regions/region-001_00000000-00001640.wav
+expected review order: compare in sequence against the known script; content is not machine-confirmed
+confirmed content: PENDING HUMAN REVIEW
+start complete: PENDING HUMAN REVIEW
+end complete: PENDING HUMAN REVIEW
+
+REGION 002
+startMs: 4330 (00:00:04.330)
+endMs: 5680 (00:00:05.680)
+durationMs: 1350
+file: regions/region-002_00004330-00005680.wav
+expected review order: compare in sequence against the known script; content is not machine-confirmed
+confirmed content: PENDING HUMAN REVIEW
+start complete: PENDING HUMAN REVIEW
+end complete: PENDING HUMAN REVIEW
+
+REGION 003
+startMs: 6650 (00:00:06.650)
+endMs: 7700 (00:00:07.700)
+durationMs: 1050
+file: regions/region-003_00006650-00007700.wav
+expected review order: compare in sequence against the known script; content is not machine-confirmed
+confirmed content: PENDING HUMAN REVIEW
+start complete: PENDING HUMAN REVIEW
+end complete: PENDING HUMAN REVIEW
+
+REGION 004
+startMs: 8250 (00:00:08.250)
+endMs: 12840 (00:00:12.840)
+durationMs: 4590
+file: regions/region-004_00008250-00012840.wav
+expected review order: compare in sequence against the known script; content is not machine-confirmed
+confirmed content: PENDING HUMAN REVIEW
+start complete: PENDING HUMAN REVIEW
+end complete: PENDING HUMAN REVIEW
+
+REGION 005
+startMs: 18710 (00:00:18.710)
+endMs: 21320 (00:00:21.320)
+durationMs: 2610
+file: regions/region-005_00018710-00021320.wav
+expected review order: compare in sequence against the known script; content is not machine-confirmed
+confirmed content: PENDING HUMAN REVIEW
+start complete: PENDING HUMAN REVIEW
+end complete: PENDING HUMAN REVIEW
+
+REGION 006
+startMs: 26110 (00:00:26.110)
+endMs: 29100 (00:00:29.100)
+durationMs: 2990
+file: regions/region-006_00026110-00029100.wav
+expected review order: compare in sequence against the known script; content is not machine-confirmed
+confirmed content: PENDING HUMAN REVIEW
+start complete: PENDING HUMAN REVIEW
+end complete: PENDING HUMAN REVIEW
+
+REGION 007
+startMs: 29650 (00:00:29.650)
+endMs: 30600 (00:00:30.600)
+durationMs: 950
+file: regions/region-007_00029650-00030600.wav
+expected review order: compare in sequence against the known script; content is not machine-confirmed
+confirmed content: PENDING HUMAN REVIEW
+start complete: PENDING HUMAN REVIEW
+end complete: PENDING HUMAN REVIEW
+
+REGION 008
+startMs: 30790 (00:00:30.790)
+endMs: 35060 (00:00:35.060)
+durationMs: 4270
+file: regions/region-008_00030790-00035060.wav
+expected review order: compare in sequence against the known script; content is not machine-confirmed
+confirmed content: PENDING HUMAN REVIEW
+start complete: PENDING HUMAN REVIEW
+end complete: PENDING HUMAN REVIEW
+
+REGION 009
+startMs: 38370 (00:00:38.370)
+endMs: 41960 (00:00:41.960)
+durationMs: 3590
+file: regions/region-009_00038370-00041960.wav
+expected review order: compare in sequence against the known script; content is not machine-confirmed
+confirmed content: PENDING HUMAN REVIEW
+start complete: PENDING HUMAN REVIEW
+end complete: PENDING HUMAN REVIEW
+
+REGION 010
+startMs: 41990 (00:00:41.990)
+endMs: 42960 (00:00:42.960)
+durationMs: 970
+file: regions/region-010_00041990-00042960.wav
+expected review order: compare in sequence against the known script; content is not machine-confirmed
+confirmed content: PENDING HUMAN REVIEW
+start complete: PENDING HUMAN REVIEW
+end complete: PENDING HUMAN REVIEW
+
+REGION 011
+startMs: 43110 (00:00:43.110)
+endMs: 44480 (00:00:44.480)
+durationMs: 1370
+file: regions/region-011_00043110-00044480.wav
+expected review order: compare in sequence against the known script; content is not machine-confirmed
+confirmed content: PENDING HUMAN REVIEW
+start complete: PENDING HUMAN REVIEW
+end complete: PENDING HUMAN REVIEW
+
+REGION 012
+startMs: 45650 (00:00:45.650)
+endMs: 46600 (00:00:46.600)
+durationMs: 950
+file: regions/region-012_00045650-00046600.wav
+expected review order: compare in sequence against the known script; content is not machine-confirmed
+confirmed content: PENDING HUMAN REVIEW
+start complete: PENDING HUMAN REVIEW
+end complete: PENDING HUMAN REVIEW
+
+REGION 013
+startMs: 49630 (00:00:49.630)
+endMs: 52880 (00:00:52.880)
+durationMs: 3250
+file: regions/region-013_00049630-00052880.wav
+expected review order: compare in sequence against the known script; content is not machine-confirmed
+confirmed content: PENDING HUMAN REVIEW
+start complete: PENDING HUMAN REVIEW
+end complete: PENDING HUMAN REVIEW
+
+EXCLUDED GAPS:
+
+GAP 001
+startMs: 1640 (00:00:01.640)
+endMs: 4330 (00:00:04.330)
+durationMs: 2690
+file: excluded-gaps/gap-001_00001640-00004330.wav
+human assessment: PENDING
+
+GAP 002
+startMs: 5680 (00:00:05.680)
+endMs: 6650 (00:00:06.650)
+durationMs: 970
+file: excluded-gaps/gap-002_00005680-00006650.wav
+human assessment: PENDING
+
+GAP 003
+startMs: 7700 (00:00:07.700)
+endMs: 8250 (00:00:08.250)
+durationMs: 550
+file: excluded-gaps/gap-003_00007700-00008250.wav
+human assessment: PENDING
+
+GAP 004
+startMs: 12840 (00:00:12.840)
+endMs: 18710 (00:00:18.710)
+durationMs: 5870
+file: excluded-gaps/gap-004_00012840-00018710.wav
+human assessment: PENDING
+
+GAP 005
+startMs: 21320 (00:00:21.320)
+endMs: 26110 (00:00:26.110)
+durationMs: 4790
+file: excluded-gaps/gap-005_00021320-00026110.wav
+human assessment: PENDING
+
+GAP 006
+startMs: 29100 (00:00:29.100)
+endMs: 29650 (00:00:29.650)
+durationMs: 550
+file: excluded-gaps/gap-006_00029100-00029650.wav
+human assessment: PENDING
+
+GAP 007
+startMs: 30600 (00:00:30.600)
+endMs: 30790 (00:00:30.790)
+durationMs: 190
+file: excluded-gaps/gap-007_00030600-00030790.wav
+human assessment: PENDING
+
+GAP 008
+startMs: 35060 (00:00:35.060)
+endMs: 38370 (00:00:38.370)
+durationMs: 3310
+file: excluded-gaps/gap-008_00035060-00038370.wav
+human assessment: PENDING
+
+GAP 009
+startMs: 42960 (00:00:42.960)
+endMs: 43110 (00:00:43.110)
+durationMs: 150
+file: excluded-gaps/gap-009_00042960-00043110.wav
+human assessment: PENDING
+
+GAP 010
+startMs: 44480 (00:00:44.480)
+endMs: 45650 (00:00:45.650)
+durationMs: 1170
+file: excluded-gaps/gap-010_00044480-00045650.wav
+human assessment: PENDING
+
+GAP 011
+startMs: 46600 (00:00:46.600)
+endMs: 49630 (00:00:49.630)
+durationMs: 3030
+file: excluded-gaps/gap-011_00046600-00049630.wav
+human assessment: PENDING
+
+HUMAN REVIEW CHECKLIST:
+For each retained region: begin complete? first syllable clipped? end complete? final phoneme clipped? understandable? phrase split? noise retained?
+For each excluded gap: silence/noise only? any meaningful speech? any missing part of adjacent word/syllable?
+
+IMPORTANT: No STT or automatic content recognition was used. All content labels remain PENDING HUMAN REVIEW.

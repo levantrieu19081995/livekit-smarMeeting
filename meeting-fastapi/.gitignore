@@ -1,0 +1,12 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+pytest_cache/
+test_output/
+tmp_pytest/
+.tmp/
+*.pyc
+data/meetings/
+
+data/ai-conclusions/

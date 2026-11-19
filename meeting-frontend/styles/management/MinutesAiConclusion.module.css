@@ -1,0 +1,159 @@
+.panel {
+  min-width: 0;
+  display: grid;
+  gap: 12px;
+}
+.finalText,
+.result p,
+.manual p {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.7;
+}
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: #475569;
+  font-size: 14px;
+}
+.panel button,
+.dialog button {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 8px;
+  background: #e9edf6;
+  color: #243650;
+  cursor: pointer;
+  font: inherit;
+}
+.panel button.primary,
+.dialog button.primary {
+  color: white;
+  background: #4f46e5;
+}
+.panel button:disabled,
+.dialog button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+.panel button:focus-visible,
+.dialog button:focus-visible,
+.provenance summary:focus-visible {
+  outline: 2px solid #4f46e5;
+  outline-offset: 3px;
+}
+.badge {
+  display: inline-block;
+  padding: 4px 9px;
+  border-radius: 6px;
+  background: #e9edf6;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 600;
+}
+.note {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.error {
+  margin: 0;
+  color: #b42318;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.provenance {
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #f5f7fb;
+}
+.provenance summary {
+  cursor: pointer;
+  font-size: 14px;
+  color: #334155;
+}
+.manual,
+.ai {
+  margin-top: 16px;
+  min-width: 0;
+}
+.manual p {
+  margin-top: 8px;
+}
+.ai > .badge {
+  background: #e8e7ff;
+  color: #4338ca;
+}
+.result {
+  display: grid;
+  gap: 16px;
+  margin-top: 12px;
+}
+.result h5 {
+  margin: 0 0 6px;
+  font-size: 14px;
+}
+.result ul {
+  padding-left: 20px;
+  margin: 0;
+}
+.result li + li {
+  margin-top: 12px;
+}
+.result small {
+  color: #64748b;
+  line-height: 1.5;
+}
+.sources {
+  display: block;
+  overflow-wrap: anywhere;
+  margin-top: 4px;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: #0f172a80;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+.dialog {
+  width: min(100%, 540px);
+  max-height: calc(100dvh - 40px);
+  overflow: auto;
+  background: white;
+  color: #0f172a;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 20px 50px #0003;
+}
+.dialog h3 {
+  margin: 0 0 16px;
+}
+.dialog p {
+  line-height: 1.65;
+  font-size: 14px;
+}
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 24px;
+}
+@media (max-width: 600px) {
+  .toolbar button {
+    width: 100%;
+  }
+  .dialog {
+    padding: 18px;
+  }
+  .actions {
+    flex-wrap: wrap;
+  }
+}

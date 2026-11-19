@@ -1,0 +1,956 @@
+.main {
+  --primary-blue: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-light: #eff6ff;
+  --heading-text: #0f172a;
+  --secondary-text: #64748b;
+  --body-text: #334155;
+  --placeholder: #94a3b8;
+  --border: #e2e8f0;
+  --surface: #ffffff;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  width: 100%;
+  min-height: 100dvh;
+  overflow: auto;
+  background: var(--surface);
+  color: var(--body-text);
+  font-family: Inter, 'Segoe UI', Arial, sans-serif;
+  transition:
+    background-color 240ms ease,
+    color 240ms ease;
+}
+
+.homeHeader {
+  height: 80px;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 64px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  transition:
+    background-color 240ms ease,
+    border-color 240ms ease,
+    color 240ms ease;
+}
+
+.homeHeaderImmersive {
+  background: #070b12;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+}
+
+.homeHeaderImmersive .brand,
+.homeHeaderImmersive .accountLink {
+  color: #f8fafc;
+}
+
+.homeHeaderImmersive .helpText {
+  color: #cbd5e1;
+}
+
+.homeHeaderImmersive .accountInfo strong {
+  color: #f8fafc;
+}
+
+.homeHeaderImmersive .accountSkeleton {
+  background:
+    linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.1), transparent),
+    rgba(255, 255, 255, 0.04);
+}
+
+.homeHeaderImmersive .helpButton:hover,
+.homeHeaderImmersive .accountLink:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #7dd3fc;
+}
+
+.homeHeaderImmersive .helpDropdown {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: #0b111b;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+}
+
+.homeHeaderImmersive .helpMenuState,
+.homeHeaderImmersive .helpDocumentType {
+  color: #94a3b8;
+}
+
+.homeHeaderImmersive .helpDocumentName {
+  color: #e2e8f0;
+}
+
+.homeHeaderImmersive .helpDocumentItem:hover {
+  background: rgba(56, 189, 248, 0.1);
+  color: #7dd3fc;
+}
+
+.homeHeaderImmersive .helpDocumentIcon {
+  background: rgba(255, 255, 255, 0.06);
+  color: #38bdf8;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  color: var(--heading-text);
+  font-size: 26px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.headerNav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  min-width: 0;
+}
+
+.helpText {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--body-text);
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.helpMenuWrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.helpButton {
+  border: 0;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+.helpButton:hover {
+  color: var(--primary-hover);
+}
+
+.helpDropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 50;
+  width: min(360px, calc(100vw - 32px));
+  max-height: 320px;
+  overflow-y: auto;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.16);
+}
+
+.helpMenuState {
+  margin: 0;
+  padding: 14px 12px;
+  color: var(--secondary-text);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.helpDocumentItem {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 50px;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--body-text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.helpDocumentItem:hover {
+  background: var(--primary-light);
+  color: var(--primary-hover);
+}
+
+.helpDocumentIcon {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: var(--primary-blue);
+}
+
+.helpDocumentIcon svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.helpDocumentName {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--heading-text);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.helpDocumentType {
+  padding: 3px 7px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--secondary-text);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.helpText svg,
+.activeTab svg,
+.inactiveTab svg,
+.joinButton svg,
+.meetingsLink svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.hero {
+  position: relative;
+  min-height: 650px;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 58px 24px 32px;
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.18) 0%,
+      rgba(255, 255, 255, 0.12) 40%,
+      rgba(255, 255, 255, 0.08) 100%
+    ),
+    url('/background-images/backgroudHome.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.heroContent {
+  width: 100%;
+  max-width: 760px;
+  text-align: center;
+}
+
+.heroContent h1 {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  color: var(--heading-text);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+}
+
+.heroContent p {
+  max-width: 760px;
+  margin: 16px auto 0;
+  color: var(--secondary-text);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.desktopBreak {
+  display: block;
+}
+
+.joinCard {
+  width: 640px;
+  max-width: calc(100vw - 48px);
+  margin-top: 28px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1);
+}
+
+.cardTabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--border);
+}
+
+.activeTab,
+.inactiveTab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 64px;
+  padding: 0 16px;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.activeTab {
+  color: var(--primary-blue);
+}
+
+.activeTab::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: var(--primary-blue);
+  content: '';
+}
+
+.inactiveTab {
+  color: var(--body-text);
+}
+
+.inactiveTab:hover {
+  color: var(--primary-hover);
+  background: var(--primary-light);
+}
+
+.joinForm {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 24px 0;
+}
+
+.inputLabel {
+  margin-bottom: 8px;
+  color: var(--body-text);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.inputWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--secondary-text);
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.inputWrap:focus-within {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.inputWrap span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.inputWrap input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--heading-text);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.inputWrap input::placeholder {
+  color: var(--placeholder);
+}
+
+.validationMessage {
+  margin: 8px 0 0;
+  color: var(--danger);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.joinButton,
+.meetingsLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.joinButton {
+  margin-top: 12px;
+  border: 1px solid var(--primary-blue);
+  background: var(--primary-blue);
+  color: var(--surface);
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.joinButton:hover {
+  border-color: var(--primary-hover);
+  background: var(--primary-hover);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 24px;
+  color: var(--secondary-text);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.divider::before,
+.divider::after {
+  height: 1px;
+  flex: 1;
+  background: var(--border);
+  content: '';
+}
+
+.meetingsLink {
+  width: calc(100% - 48px);
+  margin: 0 24px 20px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--body-text);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.meetingsLink:hover {
+  background: #f8fafc;
+}
+
+.featureStrip {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 56px;
+  padding: 32px 9vw 36px;
+  background: var(--surface);
+  border-top: 1px solid #f1f5f9;
+}
+
+.featureItem {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  column-gap: 16px;
+  row-gap: 4px;
+  align-items: center;
+  min-width: 0;
+}
+
+.featureIcon {
+  grid-row: 1 / span 2;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  color: var(--primary-blue);
+}
+
+.featureIcon svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.featureItem h2 {
+  grid-column: 2;
+  min-width: 0;
+  width: 100%;
+  margin: 0;
+  color: var(--heading-text);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.featureItem p {
+  grid-column: 2;
+  min-width: 0;
+  width: 100%;
+  margin: 4px 0 0;
+  color: var(--secondary-text);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.accountPanel,
+.authActions,
+.accountSkeleton {
+  flex: 0 0 auto;
+}
+
+.accountPanel {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.authActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.accountSkeleton {
+  width: 190px;
+  height: 36px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.08), transparent), #f8fafc;
+  background-size:
+    190px 100%,
+    100% 100%;
+  animation: account-skeleton 1.1s linear infinite;
+}
+
+.accountLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+  padding: 2px 8px 2px 2px;
+  border-radius: 8px;
+  color: var(--heading-text);
+  text-decoration: none;
+  transition: background-color 180ms ease;
+}
+
+.accountAvatar {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--primary-blue);
+  color: var(--surface);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.accountInfo {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.accountInfo strong {
+  max-width: 140px;
+  overflow: hidden;
+  color: var(--heading-text);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.primaryAction,
+.secondaryAction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.primaryAction {
+  padding: 0 18px;
+  border: 1px solid var(--primary-blue);
+  background: var(--primary-blue);
+  color: var(--surface);
+}
+
+.secondaryAction {
+  padding: 0 16px;
+  border: 1px solid #cbd5e1;
+  background: var(--surface);
+  color: var(--body-text);
+}
+
+.primaryAction:hover {
+  border-color: var(--primary-hover);
+  background: var(--primary-hover);
+}
+
+.secondaryAction:hover {
+  background: #f8fafc;
+}
+
+.accountLink:hover {
+  background: #f8fafc;
+}
+
+.viewerOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background: rgba(15, 23, 42, 0.48);
+}
+
+.viewerPanel {
+  display: flex;
+  width: min(1100px, calc(100vw - 64px));
+  height: min(calc(100dvh - 64px), 900px);
+  min-height: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.28);
+}
+
+.viewerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 58px;
+  padding: 0 16px 0 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.viewerHeader h2 {
+  min-width: 0;
+  overflow: hidden;
+  margin: 0;
+  color: var(--heading-text);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.viewerCloseButton {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--body-text);
+  font: inherit;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.viewerCloseButton:hover {
+  background: #f8fafc;
+  color: var(--primary-hover);
+}
+
+.viewerBody {
+  min-height: 0;
+  flex: 1;
+  background: #f8fafc;
+}
+
+.pdfFrame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: var(--surface);
+}
+
+.docxViewer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding: 24px;
+}
+
+.viewerStatus {
+  margin: 0;
+  padding: 16px;
+  color: var(--secondary-text);
+  font-size: 14px;
+}
+
+.docxContent {
+  min-height: 100%;
+}
+
+.docxRendered {
+  color: #111827;
+}
+
+.brand:focus-visible,
+.helpButton:focus-visible,
+.helpDocumentItem:focus-visible,
+.activeTab:focus-visible,
+.inactiveTab:focus-visible,
+.joinButton:focus-visible,
+.meetingsLink:focus-visible,
+.accountLink:focus-visible,
+.primaryAction:focus-visible,
+.secondaryAction:focus-visible,
+.viewerCloseButton:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.28);
+  outline-offset: 3px;
+}
+
+@keyframes account-skeleton {
+  from {
+    background-position:
+      -220px 0,
+      0 0;
+  }
+
+  to {
+    background-position:
+      220px 0,
+      0 0;
+  }
+}
+
+@media (max-width: 1199px) {
+  .inputWrap input {
+    font-size: 16px;
+  }
+
+  .headerNav .primaryAction,
+  .headerNav .secondaryAction,
+  .headerNav .accountLink,
+  .helpButton,
+  .viewerCloseButton {
+    min-height: 44px;
+  }
+
+  .viewerCloseButton {
+    min-width: 44px;
+  }
+  .homeHeader {
+    padding-inline: 36px;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 640px;
+  }
+
+  .heroContent h1 {
+    max-width: 620px;
+    font-size: 42px;
+  }
+
+  .joinCard {
+    width: min(640px, calc(100vw - 40px));
+  }
+
+  .featureStrip {
+    gap: 32px;
+    padding-inline: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .homeHeader {
+    height: auto;
+    min-height: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 14px 18px;
+  }
+
+  .brand {
+    align-self: flex-start;
+    max-width: 100%;
+    font-size: 20px;
+    white-space: nowrap;
+  }
+
+  .headerNav {
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+
+  .headerNav .primaryAction,
+  .headerNav .accountLink {
+    min-height: 44px;
+  }
+
+  .helpText {
+    display: none;
+  }
+
+  .viewerOverlay {
+    padding: 16px;
+  }
+
+  .viewerPanel {
+    width: calc(100vw - 32px);
+    height: calc(100dvh - 32px);
+    min-height: 0;
+  }
+
+  .docxViewer {
+    padding: 16px;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 0;
+    padding: 28px 16px;
+  }
+
+  .heroContent h1 {
+    max-width: 100%;
+    font-size: clamp(28px, 7vw, 34px);
+    line-height: 1.22;
+    letter-spacing: -0.4px;
+  }
+
+  .heroContent p {
+    font-size: 15px;
+  }
+
+  .desktopBreak {
+    display: none;
+  }
+
+  .joinCard {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .inputWrap input {
+    font-size: 16px;
+  }
+
+  .activeTab,
+  .inactiveTab {
+    min-height: 58px;
+    padding-inline: 10px;
+    font-size: 14px;
+  }
+
+  .joinForm {
+    padding: 20px 18px 0;
+  }
+
+  .divider {
+    margin-inline: 18px;
+  }
+
+  .meetingsLink {
+    width: calc(100% - 36px);
+    margin-inline: 18px;
+  }
+
+  .featureStrip {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 28px 20px;
+  }
+
+  .accountPanel,
+  .authActions {
+    max-width: 100%;
+    gap: 8px;
+  }
+
+  .authActions {
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
+
+  .accountInfo {
+    display: none;
+  }
+
+  .accountSkeleton {
+    width: 128px;
+    height: 42px;
+  }
+
+  .primaryAction,
+  .secondaryAction {
+    height: 38px;
+    padding-inline: 12px;
+    font-size: 13px;
+  }
+}

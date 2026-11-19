@@ -1,0 +1,83 @@
+server:
+  port: 8080
+  servlet:
+    session:
+      cookie:
+        http-only: true
+        same-site: lax
+
+spring:
+  application:
+    name: meeting-service
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:dev}
+  session:
+    timeout: ${AUTH_SESSION_TIMEOUT:8h}
+    jdbc:
+      initialize-schema: never
+  task:
+    scheduling:
+      pool:
+        size: ${SCHEDULER_POOL_SIZE:5}
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+meeting:
+  timeline:
+    zone-id: ${MEETING_TIMELINE_ZONE_ID:Asia/Ho_Chi_Minh}
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui/index.html
+
+auth:
+  session:
+    timeout: ${AUTH_SESSION_TIMEOUT:8h}
+  registration:
+    enabled: ${AUTH_REGISTRATION_ENABLED:true}
+    local-auto-activate: ${AUTH_LOCAL_AUTO_ACTIVATE:false}
+
+google:
+  enabled: ${GOOGLE_AUTH_ENABLED:false}
+  client-id: ${GOOGLE_CLIENT_ID:}
+  allowed-domains: ${GOOGLE_ALLOWED_DOMAINS:}
+  auto-provision: ${GOOGLE_AUTO_PROVISION:false}
+
+internal-sso:
+  enabled: ${INTERNAL_SSO_ENABLED:false}
+  issuer-uri: ${INTERNAL_SSO_ISSUER_URI:}
+  client-id: ${INTERNAL_SSO_CLIENT_ID:}
+  client-secret: ${INTERNAL_SSO_CLIENT_SECRET:}
+  scopes: ${INTERNAL_SSO_SCOPES:openid,profile,email}
+
+api-safety:
+  rate-limit-enabled: ${API_RATE_LIMIT_ENABLED:true}
+  maximum-rate-keys: ${API_RATE_LIMIT_MAXIMUM_KEYS:20000}
+  login-per-identity-per-minute: ${API_LOGIN_PER_IDENTITY_PER_MINUTE:30}
+  login-per-address-per-minute: ${API_LOGIN_PER_ADDRESS_PER_MINUTE:600}
+  join-per-address-per-minute: ${API_JOIN_PER_ADDRESS_PER_MINUTE:600}
+  join-per-actor-per-minute: ${API_JOIN_PER_ACTOR_PER_MINUTE:60}
+  writes-per-actor-per-minute: ${API_WRITES_PER_ACTOR_PER_MINUTE:180}
+  chat-per-address-per-minute: ${API_CHAT_PER_ADDRESS_PER_MINUTE:6000}
+
+storage:
+  cleanup-enabled: ${STORAGE_CLEANUP_ENABLED:true}
+  cleanup-interval-ms: ${STORAGE_CLEANUP_INTERVAL_MS:10000}
+  cleanup-initial-delay-ms: ${STORAGE_CLEANUP_INITIAL_DELAY_MS:15000}
+  orphan-sweep-interval-ms: ${STORAGE_ORPHAN_SWEEP_INTERVAL_MS:60000}
+  orphan-grace-seconds: ${STORAGE_ORPHAN_GRACE_SECONDS:86400}

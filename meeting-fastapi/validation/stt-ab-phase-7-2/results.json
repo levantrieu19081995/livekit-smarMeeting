@@ -1,0 +1,454 @@
+{
+  "meeting": "Cuoc hop 4b.1 ngay 25/9/2026",
+  "meetingId": 27,
+  "rawPath": "D:\\DuAn\\Livekit\\meeting-fastapi\\data\\meetings\\meeting-27\\session-fbb8b125-b87e-414b-ba28-a03d6c3f2d05\\participants\\account-6851f76b-2ce4-4d43-9c50-d0e265d9df77\\segment-001_TR_AMmcstTmGaZF4R.wav",
+  "rawSizeBefore": 5076524,
+  "rawSizeAfter": 5076524,
+  "rawHashBefore": "85ac1884392ed7b51bcce08378f672c6bdb31f7cd2c4f1ccf990a5906d3fed7b",
+  "rawHashAfter": "85ac1884392ed7b51bcce08378f672c6bdb31f7cd2c4f1ccf990a5906d3fed7b",
+  "rawUnchanged": true,
+  "settings": {
+    "chunkSeconds": 180,
+    "speechRegionEnabled": true
+  },
+  "regionCount": 13,
+  "candidateStats": {
+    "A": {
+      "api_calls": 13,
+      "successful": 13,
+      "failed": 0,
+      "unsupported": false
+    },
+    "B": {
+      "api_calls": 13,
+      "successful": 13,
+      "failed": 0,
+      "unsupported": false
+    },
+    "C": {
+      "api_calls": 13,
+      "successful": 13,
+      "failed": 0,
+      "unsupported": false
+    }
+  },
+  "regions": [
+    {
+      "region": 1,
+      "startMs": 0,
+      "endMs": 1640,
+      "sha256": "22ea8873e0dcbea865648590003997a910d1813aebbebec97d7194e5594cdcb7",
+      "candidates": {
+        "A": {
+          "model": "gpt-4o-mini-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "",
+          "empty": true,
+          "containsCjk": false
+        },
+        "B": {
+          "model": "gpt-4o-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "あかいろ",
+          "empty": false,
+          "containsCjk": true
+        },
+        "C": {
+          "model": "gpt-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "",
+          "empty": true,
+          "containsCjk": false
+        }
+      }
+    },
+    {
+      "region": 2,
+      "startMs": 4330,
+      "endMs": 5680,
+      "sha256": "5d698a95cb3ecbe3352ac0e0a0a70dac65a903ba79207df7efefb89824ef13e9",
+      "candidates": {
+        "A": {
+          "model": "gpt-4o-mini-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "Có.",
+          "empty": false,
+          "containsCjk": false
+        },
+        "B": {
+          "model": "gpt-4o-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "Có.",
+          "empty": false,
+          "containsCjk": false
+        },
+        "C": {
+          "model": "gpt-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "Có.",
+          "empty": false,
+          "containsCjk": false
+        }
+      }
+    },
+    {
+      "region": 3,
+      "startMs": 6650,
+      "endMs": 7700,
+      "sha256": "18aad81be5deb64a4b668b861610736a66e0bce36e314ffbfe612610ffb3072c",
+      "candidates": {
+        "A": {
+          "model": "gpt-4o-mini-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "",
+          "empty": true,
+          "containsCjk": false
+        },
+        "B": {
+          "model": "gpt-4o-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "Amanecer.",
+          "empty": false,
+          "containsCjk": false
+        },
+        "C": {
+          "model": "gpt-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "",
+          "empty": true,
+          "containsCjk": false
+        }
+      }
+    },
+    {
+      "region": 4,
+      "startMs": 8250,
+      "endMs": 12840,
+      "sha256": "3d5a7ec6ca960e97237b0ce7856321c1cd129fe0638b60a54405cda542128e86",
+      "candidates": {
+        "A": {
+          "model": "gpt-4o-mini-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "好",
+          "empty": false,
+          "containsCjk": true
+        },
+        "B": {
+          "model": "gpt-4o-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "Gaaf.",
+          "empty": false,
+          "containsCjk": false
+        },
+        "C": {
+          "model": "gpt-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "Không.",
+          "empty": false,
+          "containsCjk": false
+        }
+      }
+    },
+    {
+      "region": 5,
+      "startMs": 18710,
+      "endMs": 21320,
+      "sha256": "4078d9b67a46e194f37242c92920120cd7be28f10ed227b0228134f6a5aca3e0",
+      "candidates": {
+        "A": {
+          "model": "gpt-4o-mini-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "Đồng ý.",
+          "empty": false,
+          "containsCjk": false
+        },
+        "B": {
+          "model": "gpt-4o-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "Đồng ý.",
+          "empty": false,
+          "containsCjk": false
+        },
+        "C": {
+          "model": "gpt-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "Đồng ý.",
+          "empty": false,
+          "containsCjk": false
+        }
+      }
+    },
+    {
+      "region": 6,
+      "startMs": 26110,
+      "endMs": 29100,
+      "sha256": "a720961a6e44bd97aae58b22b2b5d93a3211eeec1f0f604f6ac592d016ee7c3b",
+      "candidates": {
+        "A": {
+          "model": "gpt-4o-mini-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "Không đồng ý.",
+          "empty": false,
+          "containsCjk": false
+        },
+        "B": {
+          "model": "gpt-4o-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "Không đồng ý.",
+          "empty": false,
+          "containsCjk": false
+        },
+        "C": {
+          "model": "gpt-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "Không đồng ý.",
+          "empty": false,
+          "containsCjk": false
+        }
+      }
+    },
+    {
+      "region": 7,
+      "startMs": 29650,
+      "endMs": 30600,
+      "sha256": "845980eb358cdbb16cc71bcce0efde250c3dcce19ad1fb8304c4bf1cb0e3e811",
+      "candidates": {
+        "A": {
+          "model": "gpt-4o-mini-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "",
+          "empty": true,
+          "containsCjk": false
+        },
+        "B": {
+          "model": "gpt-4o-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "El lápiz.",
+          "empty": false,
+          "containsCjk": false
+        },
+        "C": {
+          "model": "gpt-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "",
+          "empty": true,
+          "containsCjk": false
+        }
+      }
+    },
+    {
+      "region": 8,
+      "startMs": 30790,
+      "endMs": 35060,
+      "sha256": "d74a4eb9eb9d2d026fdd7b8149a766e29199f4bd38d4700c397617f32f0dd4bd",
+      "candidates": {
+        "A": {
+          "model": "gpt-4o-mini-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "",
+          "empty": true,
+          "containsCjk": false
+        },
+        "B": {
+          "model": "gpt-4o-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": ".",
+          "empty": false,
+          "containsCjk": false
+        },
+        "C": {
+          "model": "gpt-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "Ừ.",
+          "empty": false,
+          "containsCjk": false
+        }
+      }
+    },
+    {
+      "region": 9,
+      "startMs": 38370,
+      "endMs": 41960,
+      "sha256": "17360ddede8162c22ab95bc2e1647ffa55d9dfde4e7f2745d0af3dfeade35c13",
+      "candidates": {
+        "A": {
+          "model": "gpt-4o-mini-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "nhất trí",
+          "empty": false,
+          "containsCjk": false
+        },
+        "B": {
+          "model": "gpt-4o-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "Nhất trí.",
+          "empty": false,
+          "containsCjk": false
+        },
+        "C": {
+          "model": "gpt-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "Nhất trí.",
+          "empty": false,
+          "containsCjk": false
+        }
+      }
+    },
+    {
+      "region": 10,
+      "startMs": 41990,
+      "endMs": 42960,
+      "sha256": "e0cddcdf3f24cf6b322dd02262010831f6057eb9c7811c5aa2f3dfd536604d38",
+      "candidates": {
+        "A": {
+          "model": "gpt-4o-mini-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "",
+          "empty": true,
+          "containsCjk": false
+        },
+        "B": {
+          "model": "gpt-4o-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "यहाँ.",
+          "empty": false,
+          "containsCjk": false
+        },
+        "C": {
+          "model": "gpt-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "",
+          "empty": true,
+          "containsCjk": false
+        }
+      }
+    },
+    {
+      "region": 11,
+      "startMs": 43110,
+      "endMs": 44480,
+      "sha256": "7439e0978b521ec5cb7580b14753e26de4421fb0a010322600a34f16efb3ec65",
+      "candidates": {
+        "A": {
+          "model": "gpt-4o-mini-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "",
+          "empty": true,
+          "containsCjk": false
+        },
+        "B": {
+          "model": "gpt-4o-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "Heilige Geest.",
+          "empty": false,
+          "containsCjk": false
+        },
+        "C": {
+          "model": "gpt-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "",
+          "empty": true,
+          "containsCjk": false
+        }
+      }
+    },
+    {
+      "region": 12,
+      "startMs": 45650,
+      "endMs": 46600,
+      "sha256": "d00be495fed2beab2d72f83ead78ee2f26e1efaa361b8e9a71a2b75ebdbe4c12",
+      "candidates": {
+        "A": {
+          "model": "gpt-4o-mini-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "",
+          "empty": true,
+          "containsCjk": false
+        },
+        "B": {
+          "model": "gpt-4o-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "درست؟",
+          "empty": false,
+          "containsCjk": false
+        },
+        "C": {
+          "model": "gpt-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "",
+          "empty": true,
+          "containsCjk": false
+        }
+      }
+    },
+    {
+      "region": 13,
+      "startMs": 49630,
+      "endMs": 52880,
+      "sha256": "051b2da5df7c7aefd5998322cedc66274a58e19b7a400ec60fb1c754617338ab",
+      "candidates": {
+        "A": {
+          "model": "gpt-4o-mini-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "だどこか",
+          "empty": false,
+          "containsCjk": true
+        },
+        "B": {
+          "model": "gpt-4o-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "ガトーコカ。",
+          "empty": false,
+          "containsCjk": true
+        },
+        "C": {
+          "model": "gpt-transcribe",
+          "language": "vi",
+          "promptSent": false,
+          "text": "Kết thúc cuộc họp.",
+          "empty": false,
+          "containsCjk": false
+        }
+      }
+    }
+  ],
+  "tempAudioRemaining": 0
+}

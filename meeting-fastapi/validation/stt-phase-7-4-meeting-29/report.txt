@@ -1,0 +1,18 @@
+PHASE 7.4 meeting-29 diagnostic
+RAW: D:\DuAn\Livekit\meeting-fastapi\data\meetings\meeting-29\session-6aaf59a9-bbae-4d8f-8427-6e3e0b4baed4\participants\account-6851f76b-2ce4-4d43-9c50-d0e265d9df77\segment-001_TR_AMXD5kmgfqKwUb.wav
+RAW hash before: b82e7dfc1436cf65f71e2a0b69b6ee795fb58cee3832b26d9c14f976bb639b92
+RAW hash after: b82e7dfc1436cf65f71e2a0b69b6ee795fb58cee3832b26d9c14f976bb639b92
+RAW unchanged: True
+Region count: 4
+
+Regions:
+001: 0..640 ms (640 ms)
+002: 1370..7160 ms (5790 ms)
+003: 8230..11100 ms (2870 ms)
+004: 12050..13700 ms (1650 ms)
+
+STT results:
+CURRENT: Cáo thủ khoa.
++500: Cáo thủ khóc.
++1000: Cá thu khô.
+RAW REFERENCE: Cáo thu khọc.

@@ -1,0 +1,97 @@
+.options {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+  padding: 24px;
+  color: #17243a;
+}
+
+.options button,
+.options a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 56px;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 8px;
+  background: #f1f5f9;
+  color: inherit;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.options button:hover:not(:disabled),
+.options a:hover {
+  background: #e2e8f0;
+}
+
+.options :focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 3px;
+}
+
+.options button:disabled,
+.options a[aria-disabled='true'] {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.options svg {
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.options .arrow {
+  margin-left: auto;
+  color: #64748b;
+}
+
+.dark {
+  padding: 28px 0 0;
+  color: #dce8f3;
+}
+
+.dark button,
+.dark a {
+  background: #ffffff08;
+}
+
+.dark button:hover:not(:disabled),
+.dark a:hover {
+  background: #ffffff12;
+}
+
+.dark .arrow {
+  color: #96adbf;
+}
+
+@media (max-width: 480px) {
+  .options {
+    padding: 20px 16px;
+  }
+
+  .dark {
+    padding: 24px 0 0;
+  }
+
+  .options button,
+  .options a {
+    gap: 10px;
+    padding: 12px;
+    font-size: 13px;
+  }
+}

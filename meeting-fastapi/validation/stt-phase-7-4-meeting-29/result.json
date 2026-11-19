@@ -1,0 +1,131 @@
+{
+  "meetingId": 29,
+  "title": "Cu?c h?p 4b2",
+  "sessionId": "6aaf59a9-bbae-4d8f-8427-6e3e0b4baed4",
+  "participant": "account:6851f76b-2ce4-4d43-9c50-d0e265d9df77",
+  "displayName": "levantrieu",
+  "trackSid": "TR_AMXD5kmgfqKwUb",
+  "rawRelativePath": "participants/account-6851f76b-2ce4-4d43-9c50-d0e265d9df77/segment-001_TR_AMXD5kmgfqKwUb.wav",
+  "rawPath": "D:\\DuAn\\Livekit\\meeting-fastapi\\data\\meetings\\meeting-29\\session-6aaf59a9-bbae-4d8f-8427-6e3e0b4baed4\\participants\\account-6851f76b-2ce4-4d43-9c50-d0e265d9df77\\segment-001_TR_AMXD5kmgfqKwUb.wav",
+  "rawDurationMs": 13700,
+  "channels": 1,
+  "sampleWidthBytes": 2,
+  "sampleRate": 48000,
+  "frameCount": 657600,
+  "rawSizeBefore": 1315244,
+  "rawSizeAfter": 1315244,
+  "rawHashBefore": "b82e7dfc1436cf65f71e2a0b69b6ee795fb58cee3832b26d9c14f976bb639b92",
+  "rawHashAfter": "b82e7dfc1436cf65f71e2a0b69b6ee795fb58cee3832b26d9c14f976bb639b92",
+  "rawUnchanged": true,
+  "effectiveStt": {
+    "model": "gpt-transcribe",
+    "language": "vi",
+    "promptSent": false
+  },
+  "srd": {
+    "settingsUnchanged": true,
+    "regionCount": 4,
+    "regions": [
+      {
+        "index": 1,
+        "startMs": 0,
+        "endMs": 640,
+        "durationMs": 640
+      },
+      {
+        "index": 2,
+        "startMs": 1370,
+        "endMs": 7160,
+        "durationMs": 5790
+      },
+      {
+        "index": 3,
+        "startMs": 8230,
+        "endMs": 11100,
+        "durationMs": 2870
+      },
+      {
+        "index": 4,
+        "startMs": 12050,
+        "endMs": 13700,
+        "durationMs": 1650
+      }
+    ]
+  },
+  "timeline": {
+    "previousRegion": {
+      "startMs": 8230,
+      "endMs": 11100,
+      "durationMs": 2870
+    },
+    "precedingGap": {
+      "startMs": 11100,
+      "endMs": 12050,
+      "durationMs": 950
+    },
+    "currentFinalRegion": {
+      "startMs": 12050,
+      "endMs": 13700,
+      "durationMs": 1650
+    },
+    "rawEofMs": 13700
+  },
+  "files": {
+    "current": {
+      "path": "D:\\DuAn\\Livekit\\meeting-fastapi\\validation\\stt-phase-7-4-meeting-29\\current-region\\final-current.wav",
+      "startMs": 12050,
+      "endMs": 13700,
+      "durationMs": 1650,
+      "sha256": "e831990fa37dc77a641a5467056b3c84cad3688e3a0c237e597779a358708f1d"
+    },
+    "rawReference": {
+      "path": "D:\\DuAn\\Livekit\\meeting-fastapi\\validation\\stt-phase-7-4-meeting-29\\raw-tail\\final-reference.wav",
+      "startMs": 9050,
+      "endMs": 13700,
+      "durationMs": 4650,
+      "sha256": "646f8bc552289c08ff622773d22bc510def93f71e09f166506aa4aa2378d51e2"
+    },
+    "expanded500": {
+      "path": "D:\\DuAn\\Livekit\\meeting-fastapi\\validation\\stt-phase-7-4-meeting-29\\expanded-region\\final-expanded-plus-500ms.wav",
+      "startMs": 11550,
+      "endMs": 13700,
+      "durationMs": 2150,
+      "sha256": "84d2688687a70d5ef7694d96b4fa67139a99a89c9753deac4d6d7b764ae0836c"
+    },
+    "expanded1000": {
+      "path": "D:\\DuAn\\Livekit\\meeting-fastapi\\validation\\stt-phase-7-4-meeting-29\\expanded-region\\final-expanded-plus-1000ms.wav",
+      "startMs": 11050,
+      "endMs": 13700,
+      "durationMs": 2650,
+      "sha256": "110b5974a950ca035927e88e5c73af73cf98a6e286ff6ed03ecb6dad0a120be9"
+    },
+    "precedingGap": {
+      "path": "D:\\DuAn\\Livekit\\meeting-fastapi\\validation\\stt-phase-7-4-meeting-29\\gaps\\preceding-gap-before-final.wav",
+      "startMs": 11100,
+      "endMs": 12050,
+      "durationMs": 950,
+      "sha256": "3bee8021a61219aed010b22bfdd79730850a1a3cb09b7a59a67372b7fe97685a"
+    },
+    "previousRegion": {
+      "path": "D:\\DuAn\\Livekit\\meeting-fastapi\\validation\\stt-phase-7-4-meeting-29\\gaps\\previous-region.wav",
+      "startMs": 8230,
+      "endMs": 11100,
+      "durationMs": 2870,
+      "sha256": "983b621729b3c1c3f5810e623f2e3c80af1065f60a940f2c59b4f0946aea48af"
+    },
+    "postFinalTail": {
+      "path": "D:\\DuAn\\Livekit\\meeting-fastapi\\validation\\stt-phase-7-4-meeting-29\\gaps\\post-final-tail.wav",
+      "startMs": 13700,
+      "endMs": 13700,
+      "durationMs": 0,
+      "sha256": "531cd597b25052b4845ef2f3887dec2183240802a93b6e044960de8ba017caa0"
+    }
+  },
+  "sttResults": {
+    "current": "Cáo thủ khoa.",
+    "expanded500": "Cáo thủ khóc.",
+    "expanded1000": "Cá thu khô.",
+    "rawReference": "Cáo thu khọc."
+  },
+  "tempAudioRemaining": 0
+}

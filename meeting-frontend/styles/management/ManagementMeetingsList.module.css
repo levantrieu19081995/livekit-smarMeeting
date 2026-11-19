@@ -1,0 +1,850 @@
+.page {
+  width: calc(100% - 48px);
+  max-width: 1460px;
+  margin: 0 auto;
+  padding: 16px 0 24px;
+}
+
+.heroBreadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.heroBreadcrumbSlash {
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.heroBreadcrumbMuted {
+  color: #475569;
+  font-weight: 500;
+}
+
+.heroSubtitleLine {
+  display: block;
+}
+
+.toolbar {
+  display: grid;
+  grid-template-columns: minmax(360px, 1.8fr) 230px 230px 275px auto;
+  align-items: center;
+  gap: 16px;
+  min-height: 74px;
+  margin-top: 16px;
+  padding: 12px 18px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.searchControl,
+.selectControl,
+.presentationControl,
+.sortPresentation,
+.viewButton {
+  min-width: 0;
+  height: 46px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #334155;
+  font: inherit;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.searchControl,
+.selectControl,
+.presentationControl,
+.sortPresentation {
+  display: inline-flex;
+  align-items: center;
+}
+
+.searchControl {
+  position: relative;
+  width: 100%;
+  color: #64748b;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 15px;
+  display: inline-flex;
+  color: #475569;
+  pointer-events: none;
+}
+
+.searchControl input {
+  width: 100%;
+  height: 100%;
+  padding: 0 16px 0 48px;
+  border: 0;
+  background: transparent;
+  color: #0f172a;
+  font: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+.searchControl input::placeholder {
+  color: #64748b;
+}
+
+.selectControl {
+  position: relative;
+}
+
+.selectControl select {
+  width: 100%;
+  height: 100%;
+  padding: 0 44px 0 16px;
+  border: 0;
+  appearance: none;
+  background: transparent;
+  color: #0f172a;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+}
+
+.selectControl > span:last-child {
+  position: absolute;
+  right: 14px;
+  display: inline-flex;
+  color: #1e3a8a;
+  pointer-events: none;
+}
+
+.presentationControl {
+  justify-content: flex-start;
+  gap: 12px;
+  width: 100%;
+  padding: 0 14px;
+  cursor: default;
+}
+
+.presentationControl span:nth-child(2) {
+  flex: 1;
+  text-align: left;
+}
+
+.viewSwitcher {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  width: 244px;
+  max-width: 100%;
+}
+
+.viewButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 104px;
+  padding: 0 15px;
+  color: #334155;
+  font-weight: 600;
+  cursor: default;
+}
+
+.viewButtonActive {
+  border-color: #bfdbfe;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.dataPanel {
+  margin-top: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #ffffff;
+  overflow: visible;
+}
+
+.dataPanelTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  min-height: 54px;
+  padding: 0 18px;
+}
+
+.resultCount {
+  color: #0f172a;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.sortGroup {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #475569;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.sortPresentation {
+  gap: 12px;
+  justify-content: space-between;
+  width: 244px;
+  padding: 0 12px 0 16px;
+  color: #334155;
+  font-weight: 500;
+}
+
+.listHeader,
+.meetingRow {
+  display: grid;
+  grid-template-columns:
+    minmax(280px, 1.55fr)
+    minmax(220px, 1.15fr)
+    minmax(190px, 0.95fr)
+    140px
+    170px
+    340px;
+  align-items: center;
+  gap: 12px;
+}
+
+.listHeader {
+  min-height: 42px;
+  margin: 0 18px;
+  padding: 0 14px;
+  border-radius: 8px 8px 0 0;
+  background: #f8fafc;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.meetingRows {
+  overflow: visible;
+}
+
+.meetingRow {
+  min-height: 64px;
+  margin: 0 18px;
+  padding: 8px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #334155;
+  transition: background-color 0.16s ease;
+}
+
+.meetingRow:last-child {
+  border-bottom: 0;
+}
+
+.meetingRow:hover {
+  background: #f8fafc;
+}
+
+.identityCell,
+.timeCell,
+.participantCell,
+.badgeCell,
+.actionCell {
+  min-width: 0;
+}
+
+.identityCell {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.meetingIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  border-radius: 11px;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.meetingIdentity {
+  min-width: 0;
+}
+
+.meetingTitle {
+  margin: 0;
+  overflow: hidden;
+  color: #0f172a;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.meetingCode {
+  margin: 5px 0 0;
+  overflow: hidden;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.timeCell {
+  display: grid;
+  gap: 4px;
+}
+
+.dateLine {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.dateLine span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.timeLine {
+  margin: 0 0 0 28px;
+  overflow: hidden;
+  color: #475569;
+  font-size: 13px;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.participantCell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatarGroup {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.avatar {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  margin-left: -7px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: #334155;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.avatar:first-child {
+  margin-left: 0;
+}
+
+.avatar:nth-child(2) {
+  background: #f1f5f9;
+}
+
+.avatar:nth-child(3) {
+  background: #e0f2fe;
+}
+
+.avatarMore {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.participantCount {
+  color: #475569;
+  font-size: 13px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.accessBadge,
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 31px;
+  padding: 0 13px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.accessBadgePublic {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.accessBadgePrivate {
+  background: #fdf2f8;
+  color: #db2777;
+}
+
+.statusUPCOMING {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.statusIN_PROGRESS {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.statusCOMPLETED {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.statusCANCELLED {
+  background: #fef2f2;
+  color: #ef4444;
+}
+
+.actionCell {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  overflow: visible;
+}
+
+.joinButton,
+.detailButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  height: 40px;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 0.16s ease,
+    border-color 0.16s ease,
+    color 0.16s ease;
+}
+
+.joinButton {
+  min-width: 122px;
+  border: 1px solid #2563eb;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.joinButton:hover {
+  border-color: #1d4ed8;
+  background: #1d4ed8;
+}
+
+.detailButton {
+  min-width: 138px;
+  border: 1px solid #bfdbfe;
+  background: #ffffff;
+  color: #2563eb;
+}
+
+.detailButton:hover {
+  border-color: #93c5fd;
+  background: #eff6ff;
+}
+
+.loadingState,
+.errorState,
+.emptyState {
+  display: grid;
+  place-items: center;
+  min-height: 168px;
+  margin: 0 18px;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.errorState {
+  color: #ef4444;
+}
+
+.emptyState {
+  align-content: center;
+  gap: 12px;
+}
+
+.emptyState p {
+  margin: 0;
+}
+
+.emptyStateIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.searchControl svg,
+.selectControl svg,
+.presentationControl svg,
+.viewButton svg,
+.sortPresentation svg,
+.meetingIcon svg,
+.dateLine svg,
+.accessBadge svg,
+.statusBadge svg,
+.joinButton svg,
+.detailButton svg,
+.emptyStateIcon svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+}
+
+.selectControl:focus-within,
+.searchControl:focus-within,
+.joinButton:focus-visible,
+.detailButton:focus-visible,
+.viewButton:focus-visible,
+.presentationControl:focus-visible {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.16);
+}
+
+@media (max-width: 1449px) {
+  .toolbar {
+    grid-template-columns: minmax(320px, 1fr) repeat(2, minmax(210px, 230px));
+  }
+
+  .presentationControl,
+  .viewSwitcher {
+    width: 100%;
+  }
+
+  .viewSwitcher {
+    justify-content: flex-start;
+  }
+
+  .listHeader,
+  .meetingRow {
+    grid-template-columns:
+      minmax(260px, 1.4fr)
+      minmax(210px, 1fr)
+      minmax(170px, 0.8fr)
+      132px
+      155px
+      310px;
+  }
+}
+
+@media (max-width: 1399px) {
+  .page {
+    width: calc(100% - 48px);
+  }
+
+  .toolbar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .listHeader {
+    display: none;
+  }
+
+  .meetingRows {
+    display: grid;
+    gap: 12px;
+    padding: 0 18px 18px;
+  }
+
+  .meetingRow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 16px;
+    align-items: start;
+    min-height: 0;
+    margin: 0;
+    padding: 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #ffffff;
+  }
+
+  .meetingRow:last-child {
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .identityCell {
+    grid-column: 1 / -1;
+    align-items: flex-start;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .participantCell {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    justify-content: start;
+    gap: 8px 12px;
+  }
+
+  .timeCell::before,
+  .participantCell::before,
+  .badgeCell::before {
+    content: attr(data-label);
+    grid-column: 1 / -1;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .timeCell::before {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .badgeCell {
+    display: grid;
+    align-content: start;
+    justify-items: start;
+    gap: 6px;
+    padding-top: 12px;
+    border-top: 1px solid #e2e8f0;
+  }
+
+  .accessBadge,
+  .statusBadge {
+    max-width: 100%;
+    padding: 7px 10px;
+    line-height: 1.3;
+    white-space: normal;
+  }
+
+  .actionCell {
+    grid-column: 1 / -1;
+    padding-top: 12px;
+    border-top: 1px solid #e2e8f0;
+  }
+
+  .joinButton,
+  .detailButton,
+  .actionCell > :last-child,
+  .actionCell > :last-child > button {
+    height: 44px;
+  }
+
+  .actionCell > :last-child,
+  .actionCell > :last-child > button {
+    width: 44px;
+  }
+
+  .meetingCode,
+  .dateLine span,
+  .timeLine {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .meetingTitle {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 767px) {
+  .page {
+    width: calc(100% - 24px);
+    padding-top: 16px;
+  }
+
+  .toolbar {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+
+  .viewSwitcher {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .viewButton {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .dataPanelTop {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 14px;
+  }
+
+  .sortGroup {
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
+    white-space: normal;
+  }
+
+  .sortPresentation {
+    width: 100%;
+  }
+
+  .meetingRows {
+    padding: 0 10px 14px;
+  }
+
+  .meetingRow {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    padding: 12px;
+  }
+
+  .timeCell,
+  .participantCell,
+  .badgeCell {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.5fr);
+    gap: 6px 10px;
+    padding-block: 12px;
+    border-top: 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .timeCell::before,
+  .participantCell::before,
+  .badgeCell::before {
+    grid-column: 1;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .timeCell::before,
+  .participantCell::before {
+    grid-row: 1 / 3;
+  }
+
+  .dateLine,
+  .timeLine,
+  .avatarGroup,
+  .participantCount {
+    grid-column: 2;
+    justify-self: end;
+    text-align: right;
+  }
+
+  .dateLine {
+    align-items: flex-start;
+    gap: 6px;
+    line-height: 1.4;
+  }
+
+  .timeLine {
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .avatarGroup {
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    row-gap: 4px;
+  }
+
+  .participantCount {
+    white-space: normal;
+    line-height: 1.4;
+  }
+
+  .badgeCell {
+    align-items: center;
+    justify-items: stretch;
+  }
+
+  .accessBadge,
+  .statusBadge {
+    grid-column: 2;
+    justify-self: end;
+  }
+
+  .actionCell {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr) 44px;
+    gap: 8px;
+    border-top: 0;
+  }
+
+  .joinButton,
+  .detailButton {
+    min-width: 0;
+    height: 44px;
+    gap: 6px;
+    font-size: 12px;
+  }
+
+  .joinButton svg,
+  .detailButton svg {
+    width: 16px;
+    height: 16px;
+    flex-basis: 16px;
+  }
+
+  .accessBadge,
+  .statusBadge {
+    gap: 6px;
+    font-size: 12px;
+  }
+
+  .loadingState,
+  .errorState,
+  .emptyState {
+    margin: 0 14px;
+  }
+}

@@ -1,0 +1,77 @@
+.panel {
+  --panel-surface: #fff;
+  --panel-field: #e9ecf5;
+  --panel-field-hover: #dde3f0;
+  --panel-tonal: #f0f4f9;
+  --panel-text: #202124;
+  --panel-muted: #5f6368;
+  --panel-primary: #0b57d0;
+  --panel-primary-hover: #0842a0;
+  --panel-selected: #d3e3fd;
+  --panel-selected-text: #041e49;
+  --panel-disabled: #e3e3e3;
+  --panel-disabled-text: #747775;
+  --panel-divider: #e0e3e7;
+  --panel-success: #e6f4ea;
+  --panel-success-text: #137333;
+  --panel-error: #fce8e6;
+  --panel-error-text: #b3261e;
+  --panel-warning: #fef7e0;
+  --panel-warning-text: #795500;
+  background: var(--panel-surface);
+  color: var(--panel-text);
+  color-scheme: light;
+  min-width: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.panel,
+.panel *,
+.panel *::before,
+.panel *::after {
+  box-sizing: border-box;
+}
+
+.panel :where(button, select, textarea, input) {
+  font: inherit;
+}
+
+.panel :where(button) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 44px;
+  min-height: 44px;
+  max-width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--panel-field);
+  color: var(--panel-text);
+  cursor: pointer;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.panel :where(button):not(:disabled):hover {
+  background: var(--panel-field-hover);
+}
+
+.panel :is(button, select, textarea):disabled {
+  background: var(--panel-disabled);
+  color: var(--panel-disabled-text);
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+.panel :is(input[type='checkbox'], input[type='radio']) {
+  accent-color: var(--panel-primary);
+}
+
+.panel :is(button, input, textarea, select, summary, a):focus-visible {
+  outline: 2px solid var(--panel-primary);
+  outline-offset: 2px;
+}

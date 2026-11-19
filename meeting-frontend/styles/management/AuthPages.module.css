@@ -1,0 +1,604 @@
+.authPage {
+  height: 100dvh;
+  min-height: 100svh;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: #0d0d0d;
+  color: #111111;
+}
+
+.authContainer {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  width: min(1480px, 100%);
+  min-height: calc(100svh - 40px);
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #f7f7f5;
+}
+
+.formPane {
+  display: grid;
+  place-items: center;
+  min-height: 0;
+  padding: clamp(28px, 5vw, 72px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.registerPane {
+  grid-column: 1;
+}
+
+.loginPane {
+  grid-column: 2;
+}
+
+.registerPane,
+.loginPane {
+  grid-row: 1;
+  width: 100%;
+  min-width: 0;
+}
+
+.paneInactive {
+  pointer-events: none;
+}
+
+.authForm {
+  display: grid;
+  gap: 14px;
+  width: min(100%, 440px);
+}
+
+.registerForm {
+  width: min(100%, 492px);
+  gap: 11px;
+}
+
+.brandText,
+.panelKicker {
+  margin: 0;
+  color: #5f625e;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.formLead {
+  margin: 2px 0 0;
+  color: #6f716d;
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+.formTitle {
+  margin: 0;
+  color: #111111;
+  font-size: clamp(2rem, 4vw, 3.35rem);
+  font-weight: 760;
+  letter-spacing: 0;
+  line-height: 0.95;
+}
+
+.formDescription {
+  margin: 0 0 8px;
+  color: #5c5f5a;
+  font-size: 0.96rem;
+  line-height: 1.55;
+}
+
+.fieldGroup {
+  display: grid;
+  gap: 7px;
+}
+
+.fieldGroup label,
+.termsRow {
+  color: #333333;
+  font-size: 0.88rem;
+  font-weight: 650;
+}
+
+.fieldGroup input,
+.input {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  box-sizing: border-box;
+  border: 1px solid #d8d8d2;
+  border-radius: 11px;
+  background: #ffffff;
+  color: #111111;
+  font: inherit;
+  outline: none;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease;
+}
+
+.fieldGroup input:focus-visible,
+.termsRow input:focus-visible,
+.primaryButton:focus-visible,
+.switchText button:focus-visible,
+.message button:focus-visible,
+.passwordToggle:focus-visible,
+.panelSwitchBlock button:focus-visible {
+  outline: 3px solid rgba(17, 17, 17, 0.24);
+  outline-offset: 2px;
+}
+
+.fieldGroup input:focus {
+  border-color: #111111;
+  box-shadow: 0 0 0 4px rgba(17, 17, 17, 0.06);
+}
+
+.fieldGroup input:disabled,
+.termsRow input:disabled {
+  cursor: not-allowed;
+  opacity: 0.62;
+}
+
+.passwordField {
+  position: relative;
+  width: 100%;
+}
+
+.passwordField .input {
+  width: 100%;
+  padding-right: 50px;
+  box-sizing: border-box;
+}
+
+.passwordToggle {
+  appearance: none;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  box-shadow: none;
+  color: #555555;
+  cursor: pointer;
+  font: inherit;
+  line-height: 0;
+  z-index: 2;
+}
+
+.passwordToggle:hover:not(:disabled) {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.passwordToggle svg {
+  display: block;
+  width: 19px;
+  height: 19px;
+  fill: currentColor;
+  pointer-events: none;
+}
+
+.termsRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.45;
+}
+
+.termsRow input {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 auto;
+  margin-top: 2px;
+  accent-color: #111111;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 18px;
+  border: 1px solid #111111;
+  border-radius: 12px;
+  background: #111111;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 760;
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    background-color 160ms ease,
+    border-color 160ms ease;
+}
+
+.primaryButton:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #262626;
+  border-color: #262626;
+}
+
+.primaryButton:disabled {
+  cursor: wait;
+  opacity: 0.68;
+}
+
+.switchText {
+  margin: 0;
+  color: #5c5f5a;
+  font-size: 0.92rem;
+  text-align: center;
+}
+
+.switchText button,
+.message button {
+  border: 0;
+  background: transparent;
+  color: #111111;
+  font: inherit;
+  font-weight: 760;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.error,
+.message {
+  margin: 0;
+  padding: 11px 12px;
+  border-radius: 11px;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.error {
+  border: 1px solid #e6c5c5;
+  background: #fff4f4;
+  color: #9b1c1c;
+}
+
+.message {
+  display: grid;
+  gap: 8px;
+  border: 1px solid #cfdccf;
+  background: #f4fbf4;
+  color: #245824;
+}
+
+.message p {
+  margin: 0;
+}
+
+.visualPanel {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 10;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  color: #ffffff;
+  backface-visibility: hidden;
+  contain: paint;
+  transition: transform 760ms cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.visualPanelRight {
+  transform: translate3d(0, 0, 0);
+}
+
+.visualPanelLeft {
+  transform: translate3d(-100%, 0, 0);
+}
+
+.visualImage {
+  object-fit: cover;
+}
+
+.visualOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.24), rgba(10, 10, 10, 0.76));
+}
+
+.visualContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-height: 100%;
+  align-items: flex-end;
+  padding: clamp(32px, 5vw, 76px);
+}
+
+.panelContent {
+  position: absolute;
+  inset-inline: clamp(32px, 5vw, 76px);
+  bottom: clamp(32px, 6vw, 86px);
+  display: grid;
+  gap: 18px;
+  max-width: 560px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms ease;
+}
+
+.panelContentVisible {
+  opacity: 1;
+  pointer-events: auto;
+  transition-delay: 260ms;
+}
+
+.panelKicker {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.panelContent h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(2.3rem, 5vw, 4.8rem);
+  font-weight: 780;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+.panelContent p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(1rem, 1.2vw, 1.12rem);
+  line-height: 1.62;
+}
+
+.panelSwitchBlock {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+}
+
+.panelSwitchBlock button {
+  min-height: 42px;
+  padding: 0 20px;
+  border: 1px solid rgba(255, 255, 255, 0.74);
+  border-radius: 999px;
+  background: transparent;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 760;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease,
+    border-color 160ms ease;
+}
+
+.panelSwitchBlock button:hover {
+  background: #ffffff;
+  color: #111111;
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .authPage {
+    padding: 14px;
+  }
+
+  .authContainer {
+    min-height: calc(100svh - 28px);
+  }
+
+  .formPane {
+    padding: clamp(22px, 3.5vw, 42px);
+  }
+
+  .authForm {
+    width: min(100%, 400px);
+  }
+
+  .registerForm {
+    width: min(100%, 430px);
+  }
+
+  .visualContent {
+    padding: 34px;
+  }
+
+  .panelContent {
+    inset-inline: 34px;
+    bottom: 38px;
+  }
+}
+
+@media (max-width: 767px) {
+  .authPage {
+    display: block;
+    min-height: 0;
+    padding: 0;
+    background: #f7f7f5;
+  }
+
+  .authContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    min-height: 100%;
+    align-content: start;
+    border: 0;
+    overflow-x: hidden;
+  }
+
+  .visualPanel {
+    position: relative;
+    inset: auto;
+    grid-row: 1;
+    width: 100%;
+    height: auto;
+    transform: none !important;
+  }
+
+  .visualPanelRight,
+  .visualPanelLeft {
+    transform: none;
+  }
+
+  .visualContent {
+    display: grid;
+    min-height: 0;
+    padding: 18px max(20px, env(safe-area-inset-right)) 18px max(20px, env(safe-area-inset-left));
+  }
+
+  .panelContent {
+    position: relative;
+    inset: auto;
+    display: none;
+    max-width: none;
+    gap: 8px;
+    transition: none;
+  }
+
+  .panelContentVisible {
+    display: grid;
+  }
+
+  .panelContent h2 {
+    font-size: clamp(1.25rem, 5.5vw, 1.65rem);
+    line-height: 1.25;
+  }
+
+  .panelContent p {
+    display: none;
+  }
+
+  .panelSwitchBlock {
+    margin-top: 0;
+    gap: 8px;
+    font-size: 0.875rem;
+  }
+
+  .panelSwitchBlock button {
+    min-height: 44px;
+    padding-inline: 16px;
+  }
+
+  .formPane {
+    display: none;
+    grid-column: 1;
+    grid-row: 2;
+    padding: 20px max(20px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom))
+      max(20px, env(safe-area-inset-left));
+    overflow: visible;
+  }
+
+  .paneActive {
+    display: grid;
+  }
+
+  .authForm,
+  .registerForm {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .formTitle {
+    font-size: clamp(1.75rem, 7vw, 2.1rem);
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+  }
+
+  .fieldGroup input {
+    font-size: 16px;
+    scroll-margin-block: 24px;
+  }
+
+  .passwordToggle {
+    right: 2px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .termsRow {
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .switchText button {
+    min-height: 44px;
+  }
+
+  .primaryButton {
+    width: 100%;
+  }
+}
+
+@media (max-height: 760px) and (min-width: 768px) {
+  .authPage {
+    padding: 12px;
+  }
+
+  .authContainer {
+    min-height: calc(100svh - 24px);
+  }
+
+  .formPane {
+    padding-block: 20px;
+  }
+
+  .authForm {
+    gap: 10px;
+  }
+
+  .registerForm {
+    gap: 8px;
+  }
+
+  .formTitle {
+    font-size: clamp(1.85rem, 3vw, 2.55rem);
+  }
+
+  .formDescription {
+    margin-bottom: 2px;
+  }
+
+  .fieldGroup {
+    gap: 5px;
+  }
+
+  .fieldGroup input {
+    height: 44px;
+  }
+
+  .primaryButton {
+    min-height: 44px;
+  }
+
+  .panelContent {
+    gap: 12px;
+    bottom: 30px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .primaryButton,
+  .fieldGroup input,
+  .panelSwitchBlock button {
+    transition: none;
+  }
+}

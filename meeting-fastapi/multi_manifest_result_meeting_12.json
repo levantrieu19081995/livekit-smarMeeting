@@ -1,0 +1,64 @@
+{
+    "processingId":  "2c2b9e94-b0c4-4569-9f35-d8b4f6068c17",
+    "result":  {
+                   "meetingId":  12,
+                   "sessionIds":  [
+                                      "8c819676-bba1-4463-bb02-2bc9074b488d",
+                                      "ef8ea6b7-94e1-4aa0-ad76-35a0095d0b0e"
+                                  ],
+                   "status":  "COMPLETED",
+                   "totalManifests":  2,
+                   "totalSegments":  3,
+                   "totalChunks":  3,
+                   "processedChunks":  3,
+                   "succeededChunks":  3,
+                   "failedChunks":  0,
+                   "transcripts":  [
+                                       {
+                                           "sessionId":  "ef8ea6b7-94e1-4aa0-ad76-35a0095d0b0e",
+                                           "attendeeId":  "account:6851f76b-2ce4-4d43-9c50-d0e265d9df77",
+                                           "speakerName":  "levantrieu",
+                                           "segmentId":  "9a313459-5d57-4e5f-b9f9-bf61952dfa9a",
+                                           "segmentIndex":  1,
+                                           "chunkIndex":  1,
+                                           "chunkStartMs":  0,
+                                           "chunkDurationMs":  950,
+                                           "segmentStartedAt":  "2026-08-26T00:27:07.290757Z",
+                                           "absoluteStartTime":  "2026-08-26T00:27:07.290757Z",
+                                           "filePath":  "participants/account-6851f76b-2ce4-4d43-9c50-d0e265d9df77/segment-001_TR_AMZ3HzTrE3CqWR.wav",
+                                           "text":  ""
+                                       },
+                                       {
+                                           "sessionId":  "8c819676-bba1-4463-bb02-2bc9074b488d",
+                                           "attendeeId":  "account:6851f76b-2ce4-4d43-9c50-d0e265d9df77",
+                                           "speakerName":  "levantrieu",
+                                           "segmentId":  "2d6cfb79-6e84-481b-99eb-102dbc328683",
+                                           "segmentIndex":  1,
+                                           "chunkIndex":  1,
+                                           "chunkStartMs":  0,
+                                           "chunkDurationMs":  62830,
+                                           "segmentStartedAt":  "2026-08-26T00:27:57.924976Z",
+                                           "absoluteStartTime":  "2026-08-26T00:27:57.924976Z",
+                                           "filePath":  "participants/account-6851f76b-2ce4-4d43-9c50-d0e265d9df77/segment-001_TR_AMZ3HzTrE3CqWR.wav",
+                                           "text":  "Rá»i nÃ³i chuyá»n Äi, nÃ³i giÃ¹m nÄm phÃºt Äi. NÃ³i gÃ¬ ÄÃ ng hoÃ ng Ã´ng ná»i. Chá»¯ Äi. NÃ³i gÃ¬ cÅ©ng ÄÆ°á»£c háº¿t. dáº¡o nÃ y khá»e khÃ´ng? Trá»i Æ¡i hÃ´m qua sá»­a cÃ¡i tÃ i khoáº£n láº¡i cÃ¡i Äá»ng bá» lÃªn háº¿t cÃ¡i thÃ´ng tin cá»§a username nÃ³ update cÃ¡i má». NÃ³i cá»¡ nÄm mÆ°á»i phÃºt Äi Äi. Äá»§i chá» nÃ³ Äang Äo hiá»u nÄng cho nÃ³ sá»­a giáº¥y lÃ m sao. Rá»i pháº£i ghi dÃ i dÃ i chá»© Ã´ng ná»i chá»© tá»± nhiÃªn a lÃ´ cÃ¡i táº¯t cÃ¡i háº¿t chuá»t thuáº­t. NhÆ° Äi Äi, káº¿t thÃºc cuá»c há»p Äi."
+                                       },
+                                       {
+                                           "sessionId":  "8c819676-bba1-4463-bb02-2bc9074b488d",
+                                           "attendeeId":  "account:6851f76b-2ce4-4d43-9c50-d0e265d9df77",
+                                           "speakerName":  "levantrieu",
+                                           "segmentId":  "6e0f1436-113d-402f-bc3a-42f335059d2d",
+                                           "segmentIndex":  2,
+                                           "chunkIndex":  1,
+                                           "chunkStartMs":  0,
+                                           "chunkDurationMs":  62500,
+                                           "segmentStartedAt":  "2026-08-26T00:27:57.930717Z",
+                                           "absoluteStartTime":  "2026-08-26T00:27:57.930717Z",
+                                           "filePath":  "participants/account-6851f76b-2ce4-4d43-9c50-d0e265d9df77/segment-002_TR_AMxyHuiDVYrrsL.wav",
+                                           "text":  "Hello, má»t hai bÃ  bÃ´ng. NÃ³i gÃ¬? Äáº·t cÃ¡i tÃªn nick cÅ©ng khÃ´ng Äáº·t phÃ¢n biá»t sao nÃ³ coi ÄÆ°á»£c. Äáº·t cÃ¡i tÃªn nick cÅ©ng khÃ´ng Äáº·t phÃ¢n biá»t sao nÃ³ coi ÄÆ°á»£c. KhÃ¹ng tháº¥y bÃ . ChÃ¬a váº­y váº­y? Hiá»u nÄng thÃ¬ cháº¡y ÄÆ°á»£c Äi mÃ³c ÄÃ¢u hiá»u nÄng sao?"
+                                       }
+                                   ],
+                   "failures":  [
+
+                                ]
+               }
+}

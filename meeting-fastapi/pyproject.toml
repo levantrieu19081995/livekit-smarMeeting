@@ -1,0 +1,29 @@
+[project]
+name = "meeting-fastapi"
+version = "0.1.0"
+description = "FastAPI raw LiveKit audio capture service"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi==0.116.1",
+    "uvicorn[standard]==0.35.0",
+    "pydantic-settings==2.10.1",
+    "livekit==1.1.13",
+    "livekit-api==1.2.0",
+    "openai",
+    "httpx==0.28.1",
+    "webrtcvad-wheels==2.0.14",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest==8.4.1",
+    "pytest-asyncio==1.1.0",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+exclude = ["data*", "tests*"]

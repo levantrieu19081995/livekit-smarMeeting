@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: meeting-postgres
+    environment:
+      POSTGRES_DB: meeting_db
+      POSTGRES_USER: meeting_user
+      POSTGRES_PASSWORD: meeting_password
+    ports:
+      - "5433:5432"
+    volumes:
+      - meeting-postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U meeting_user -d meeting_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  meeting-postgres-data:

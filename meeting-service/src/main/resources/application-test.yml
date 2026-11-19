@@ -1,0 +1,60 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:meetingdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  flyway:
+    enabled: false
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.H2Dialect
+  session:
+    jdbc:
+      initialize-schema: never
+
+livekit:
+  url: ws://127.0.0.1:7880
+  api-key: test-key
+  api-secret: test-secret
+  empty-timeout: 3600
+  departure-timeout: 300
+
+ai-service:
+  base-url: http://localhost:8000
+  internal-api-key: test-ai-key
+  connect-timeout-seconds: 1
+  read-timeout-seconds: 1
+
+frontend:
+  base-url: http://localhost:3000
+  allowed-origins:
+    - http://localhost:3000
+
+storage:
+  upload-dir: ${java.io.tmpdir}/meeting-service-test-uploads
+  cleanup-enabled: false
+
+meeting:
+  terminal-recovery-enabled: false
+
+auth:
+  session:
+    timeout: 8h
+  registration:
+    enabled: true
+    local-auto-activate: false
+
+google:
+  enabled: false
+  client-id:
+  allowed-domains:
+  auto-provision: false
+
+internal-sso:
+  enabled: false
+  issuer-uri:
+  client-id:
+  client-secret:
+  scopes: openid,profile,email

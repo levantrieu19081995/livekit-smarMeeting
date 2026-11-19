@@ -1,0 +1,34 @@
+# Secrets
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Dependencies / caches / build output
+.m2/
+.pnpm-store/
+node_modules/
+.next/
+.next-*/
+target/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.tsbuildinfo
+
+# Logs
+*.log
+
+# Local artifacts / large generated data
+Version/
+output/
+tmp/
+meeting-fastapi/test_output/
+meeting-fastapi/test_workspace_tmp/
+meeting-fastapi/data/
+meeting-service/uploads/
+meeting-service/target/
+
+# Nested upstream git metadata (backup of original meeting-frontend clone)
+meeting-frontend/.git.upstream-backup/

@@ -1,0 +1,90 @@
+.page {
+  display: grid;
+  place-items: center;
+  min-height: 100dvh;
+  padding: 24px;
+  box-sizing: border-box;
+  color: #e8eaed;
+  background: #000;
+}
+.card {
+  width: min(100%, 480px);
+  min-width: 0;
+  padding: 28px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background: #17191d;
+}
+.card h1 {
+  margin: 0 0 12px;
+  font-size: 24px;
+  line-height: 1.3;
+}
+.eyebrow {
+  margin: 0 0 8px;
+  color: #8ab4f8;
+  font-size: 13px;
+}
+.description {
+  margin: 0 0 20px;
+  color: #bdc1c6;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.field {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.field select,
+.submit,
+.secondary {
+  width: 100%;
+  min-height: 44px;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 16px;
+}
+.field select {
+  color-scheme: dark;
+  color: #e8eaed;
+  background: #292d33;
+}
+.submit {
+  cursor: pointer;
+  color: #062e6f;
+  background: #a8c7fa;
+  font-weight: 600;
+}
+.submit:disabled {
+  color: #9aa0a6;
+  background: #303134;
+  cursor: default;
+}
+.secondary {
+  margin-bottom: 12px;
+  cursor: pointer;
+  color: #e8eaed;
+  background: #292d33;
+}
+.field select:focus-visible,
+.submit:focus-visible,
+.secondary:focus-visible {
+  outline: 2px solid #8ab4f8;
+  outline-offset: 3px;
+}
+.error {
+  color: #f2b8b5;
+  line-height: 1.5;
+}
+@media (max-width: 479px) {
+  .page {
+    padding: 16px;
+  }
+  .card {
+    padding: 20px;
+  }
+}

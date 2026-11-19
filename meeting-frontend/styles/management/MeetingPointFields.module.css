@@ -1,0 +1,50 @@
+.section {
+  min-width: 0;
+  padding: 20px;
+  border-radius: 14px;
+  background: #fff;
+  color: #17243a;
+}
+.section h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+.section p {
+  margin: 0 0 14px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.field {
+  display: grid;
+  gap: 8px;
+  font-size: 13px;
+}
+.field textarea {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 0;
+  border-radius: 8px;
+  background: #e9eef6;
+  color: #17243a;
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.6;
+  resize: vertical;
+}
+.field textarea:focus-visible {
+  outline: 2px solid #1a73e8;
+  outline-offset: 2px;
+}
+.field textarea:read-only {
+  color: #475569;
+}
+.section .help {
+  margin: 8px 0 0;
+}
+.section .error {
+  margin: 8px 0 0;
+  color: #b3261e;
+}

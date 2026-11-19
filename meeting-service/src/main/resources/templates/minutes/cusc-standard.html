@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Biên bản họp</title>
+
+    <style>
+      @page {
+        size: A4;
+        margin: 18mm 20mm;
+      }
+
+      body {
+        color: #111827;
+        font-family: "CUSC Noto Serif", serif;
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 0;
+        background: #f3f4f6;
+      }
+
+      .page {
+        position: relative;
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        padding: 18mm 20mm;
+        box-sizing: border-box;
+        background: #ffffff;
+      }
+
+      .watermark {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-24deg);
+        color: rgba(148, 163, 184, 0.25);
+        font-size: 64px;
+        font-weight: 700;
+        letter-spacing: 0;
+        pointer-events: none;
+        text-transform: uppercase;
+      }
+
+      .header {
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .header .unit {
+        font-weight: 700;
+      }
+
+      h1 {
+        margin: 28px 0 4px;
+        text-align: center;
+        font-size: 22px;
+        text-transform: uppercase;
+      }
+
+      .meeting-date {
+        margin: 0 0 24px;
+        text-align: center;
+        font-style: italic;
+      }
+
+      h2 {
+        margin: 18px 0 8px;
+        font-size: 15px;
+        text-transform: uppercase;
+      }
+
+      .info p {
+        margin: 4px 0;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 7px 8px;
+        border: 1px solid #1f2937;
+      }
+
+      th {
+        text-align: center;
+      }
+
+      thead {
+        display: table-header-group;
+      }
+
+      tr {
+        page-break-inside: avoid;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      .prewrap {
+        min-height: 72px;
+        white-space: pre-wrap;
+      }
+
+      .signatures {
+        width: 100%;
+        margin-top: 44px;
+        border-collapse: collapse;
+        table-layout: fixed;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      .signatures td {
+        width: 50%;
+        border: 0;
+        padding: 0;
+        text-align: center;
+        vertical-align: top;
+      }
+
+      .signature-title {
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      .signature-name {
+        margin-top: 64px;
+        min-height: 20px;
+      }
+
+      .footer {
+        margin-top: 42px;
+        font-size: 12px;
+        text-align: right;
+      }
+
+      @media print {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+          background: #ffffff;
+        }
+
+        .page {
+          width: auto;
+          min-height: 0;
+          margin: 0;
+          padding: 0;
+          background: #ffffff;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="page">
+      <div class="watermark" th:if="${model.draft()}">BẢN NHÁP</div>
+
+      <header class="header">
+        <div class="unit">TRUNG TÂM CÔNG NGHỆ PHẦN MỀM ĐẠI HỌC CẦN THƠ</div>
+        <div>CANTHO UNIVERSITY SOFTWARE CENTER</div>
+      </header>
+
+      <h1>BIÊN BẢN HỌP</h1>
+
+      <p class="meeting-date">
+        (Ngày họp:
+        <span th:text="${model.meetingDate()}">01/01/2026</span>)
+      </p>
+
+      <section class="info">
+        <h2>I. THÔNG TIN CHUNG</h2>
+
+        <p>
+          <strong>Mã cuộc họp:</strong>
+          <span th:text="${model.meetingCode()}">MTG</span>
+        </p>
+
+        <p>
+          <strong>Tên cuộc họp:</strong>
+          <span th:text="${model.meetingTitle()}">Tên cuộc họp</span>
+        </p>
+
+        <p><strong>Địa điểm:</strong> <span th:text="${model.location()}">—</span></p>
+
+        <p>
+          <strong>Thời gian họp:</strong>
+          <span th:text="${model.meetingTime()}">08:00 - 09:00</span>
+        </p>
+      </section>
+
+      <section>
+        <h2>II. THÀNH PHẦN THAM DỰ</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 54px">TT</th>
+              <th>Họ tên</th>
+              <th style="width: 150px">Vai trò</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr th:each="participant : ${model.participants()}">
+              <td class="center" th:text="${participant.order()}">1</td>
+
+              <td th:text="${participant.fullName()}">Nguyễn Văn A</td>
+
+              <td th:text="${participant.role()}">Chủ tọa</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>III. NỘI DUNG CHÍNH</h2>
+
+        <div class="prewrap" th:text="${model.mainContent()}">
+          Nội dung chính
+        </div>
+      </section>
+
+      <section>
+        <h2>IV. KẾT LUẬN</h2>
+
+        <div class="prewrap"
+             th:text="${#strings.isEmpty(model.conclusion()) ? '—' : model.conclusion()}">—</div>
+      </section>
+
+      <section>
+        <table class="signatures">
+          <tbody>
+            <tr>
+              <td>
+                <div class="signature-title">THƯ KÝ</div>
+
+                <div class="signature-name" th:text="${model.secretaryName()}"></div>
+              </td>
+
+              <td>
+                <div class="signature-title">CHỦ TỌA</div>
+
+                <div class="signature-name" th:text="${model.chairmanName()}"></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <footer class="footer">BM07.40/PM/CUSC</footer>
+    </main>
+  </body>
+</html>

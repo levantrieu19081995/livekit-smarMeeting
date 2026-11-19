@@ -1,0 +1,183 @@
+.backdrop {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+
+.planet {
+  position: absolute;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 1px solid rgba(170, 180, 195, 0.42);
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse at 50% 110%, #010102 16%, transparent 66%),
+    radial-gradient(circle at 64% 30%, #202630 0%, #101419 34%, #030405 72%);
+  box-shadow:
+    inset 0 6px 22px rgba(170, 180, 195, 0.28),
+    0 -2px 18px rgba(160, 180, 210, 0.12);
+}
+
+.planet::after {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: url('/images/prejoin-planet-texture.svg') center / cover;
+  mix-blend-mode: screen;
+  opacity: 0.16;
+  content: '';
+}
+
+.planetLeft {
+  bottom: -320px;
+  left: -325px;
+  width: 660px;
+}
+
+.planetRight {
+  top: 35%;
+  right: -160px;
+  width: 420px;
+  background:
+    radial-gradient(ellipse at 50% 110%, #010102 16%, transparent 66%),
+    radial-gradient(circle at 34% 26%, #202630 0%, #101419 34%, #030405 72%);
+}
+
+.planetRight::after {
+  transform: rotate(35deg);
+}
+
+.orbit {
+  position: absolute;
+  width: 62%;
+  height: 110%;
+  border: 1px solid rgba(145, 155, 175, 0.2);
+  border-radius: 50%;
+}
+
+.orbit::after {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #9fc0ff;
+  box-shadow: 0 0 8px rgba(111, 163, 255, 0.4);
+  content: '';
+}
+
+.orbitLeft {
+  top: 19%;
+  left: -35%;
+  transform: rotate(-24deg);
+}
+
+.orbitLeft::after {
+  top: 10%;
+  right: 19.5%;
+}
+
+.orbitRight {
+  top: 0;
+  right: -35%;
+  height: 125%;
+  transform: rotate(24deg);
+}
+
+.orbitRight::after {
+  top: 31%;
+  left: 3.3%;
+}
+
+.ring {
+  position: absolute;
+  top: 92%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(170, 180, 195, 0.24);
+  border-radius: 50%;
+}
+
+.ringOuter {
+  width: 135%;
+  height: 28%;
+  border-top-color: rgba(150, 175, 205, 0.44);
+  background: linear-gradient(180deg, rgba(28, 33, 42, 0.52), rgba(3, 4, 5, 0.2) 52%);
+  box-shadow:
+    0 -3px 20px rgba(111, 163, 255, 0.07),
+    inset 0 8px 18px rgba(160, 180, 210, 0.06);
+}
+
+.ringMiddle {
+  width: 108%;
+  height: 22%;
+  border-color: rgba(170, 180, 195, 0.15);
+}
+
+.ringInner {
+  width: 76%;
+  height: 15%;
+  border-color: rgba(170, 180, 195, 0.26);
+  box-shadow: 0 -1px 8px rgba(160, 180, 210, 0.06);
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+  opacity: 0.65;
+  background:
+    radial-gradient(circle at 12% 34%, #9fc0ff 0 1px, transparent 2px),
+    radial-gradient(circle at 24% 45%, #c3cbd8 0 1px, transparent 2px),
+    radial-gradient(circle at 32% 25%, #7f8794 0 0.7px, transparent 1.5px),
+    radial-gradient(circle at 9% 61%, #7f8794 0 0.7px, transparent 1.5px),
+    radial-gradient(circle at 73% 32%, #c3cbd8 0 1px, transparent 2px),
+    radial-gradient(circle at 84% 46%, #7f8794 0 0.7px, transparent 1.5px),
+    radial-gradient(circle at 78% 61%, #9fc0ff 0 1px, transparent 2px),
+    radial-gradient(circle at 92% 24%, #7f8794 0 0.7px, transparent 1.5px);
+}
+
+@media (max-width: 1024px) {
+  .planet {
+    opacity: 0.6;
+  }
+
+  .orbit,
+  .stars {
+    opacity: 0.45;
+  }
+}
+
+@media (max-width: 767px) {
+  .planetLeft {
+    opacity: 0.4;
+  }
+
+  .planetRight,
+  .orbit,
+  .ringMiddle,
+  .stars {
+    display: none;
+  }
+
+  .ringOuter {
+    width: 190%;
+    height: 20%;
+    opacity: 0.5;
+  }
+
+  .ringInner {
+    width: 126%;
+    height: 12%;
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 600px) {
+  .planetLeft {
+    bottom: -170px;
+    left: -210px;
+    width: 330px;
+  }
+}
